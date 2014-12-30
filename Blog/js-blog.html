@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Rock, Paper, Scissors</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="your-stylesheet-link-here.css">
-  <script src="js-comparison-game.js" ></script>
-</head>
+  <head>
+    <link rel= "stylesheet" type="text/css" href ="../bootstrap-3.3.1-dist\dist\css\bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href = "../stylesheet.css"/>
+    <title>Sandra Muller</title>
 
+    <!-- Must have script here -->
+    <script src="js-comparison-game.js"></script>
+  </head>
 <body>
-  <script>
-    function playGame() {
-        var output = myFunction();
-        var divOutput = document.getElementById('divOutput');
-        divOutput.innerHTML = output[0] + "<br/>";
-        divOutput.innerHTML += output[1] + "<br/>";
-        divOutput.innerHTML += output[2] + " ";
-    };
-  </script>
-  
-  <h1>Rock, Paper, Scissors!</h1>
-  <h2>My JavaScript Game</h2>
-  <h4>29 December, 2014 by Sandra Muller in Blog Posts</h4>
+  <body>
 
-  <p>Click on the button to run Rock, Paper, Scissors.</p>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item" href="http://SandraMuller.github.io">Home</a>
+          <a class="blog-nav-item active" href="http://SandraMuller.github.io/blog.html">Blogs</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/photos.html">Photos</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/references.html">References</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="blog-post">
+          </br>
+          <h2 class="blog-post-title">Simple JS</h2>
+          <h3>Simple JavaScript game :)</h3>
+          <p class="blog-post-meta">29 December, 2014 by Sandra Muller in Blog Posts</p>
+          </br>
+          <p>Click on the button to run Rock, Paper, Scissors.</p>
+            <script>
+              function playGame() {
+              var output = myFunction();
+              var divOutput = document.getElementById('divOutput');
+              divOutput.innerHTML = output[0] + "<br/>";
+              divOutput.innerHTML += output[1] + "<br/>";
+              divOutput.innerHTML += output[2] + " ";
+              };
+            </script>
 
-  <button onclick="playGame()">Try it</button>
-  <br/>
-  <br/>
-  <div id='divOutput'>
+            <button onclick="playGame()">Try it</button>
+            <br/>
+            <br/>
+            <div id='divOutput'>
+      </div>
+    </div>
+
+    <footer class="blog-footer">
+      <p>You have reached the end of my page click on <em>Back to Blog Posts</em> to see more pages</a>.</p>
+      <p>
+        <a href="http://SandraMuller.github.io/blog.html">Back to Blog Posts</a>
+      </p>
+    </footer>
       
-  </div>
-
 </body>
 </html>
