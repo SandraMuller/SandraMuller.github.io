@@ -1,78 +1,88 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Blog Posts</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="your-stylesheet-link-here.css">
-</head>
-
+  <head>
+    <link rel= "stylesheet" type="text/css" href ="../bootstrap-3.3.1-dist\dist\css\bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href = "../stylesheet.css"/>
+    <title>Sandra Muller</title>
+  </head>
 <body>
-  <h1>!Git in the Hub!</h1>
-  <h4>28 December, 2014 by Sandra Muller in Blog Posts</h4>
-    <p>
-      SO a few days ago I knew nothing about Git and GitHub as well as the idea of posting soure code to the cloud! This blog post is about that. For all the aspiring developers! (*You guys rock*)
-    </p>
-    <h3>Version Control:</h3>
-    <p>
-        Git is version control. It's a command prompt app that allows you to browse repositories and files. I use Gitshell, which is Powershell with easy access to Git operations. So you can add/remove/rename files. Basically anything you can do in your desktop folder you can do on Powershell. Git or Version control keeps track of your files and remembers all of the changes you’ve made and when you make them. It allows you to roll back to an earlier version of a file via the use of commits (see commits).
-    </p>
-    <p>
-        Here is a copy of my Commands cheatsheet for Powershell(Gitshell):
-    <ul>
-        <li>pwd<br/>
-        print working directory<br/>
-        C:/Users/username/pwd</li>
-       <li> hostname <br/>
-        my computer's network name <br/>
-        C:/Users/username/hostname</li>
-        <li>mkdir<br/>
-        make directory (make file)<br/>
-        C:/Users/username/mkdir WhateverNameYouWant</li>
-        <li>cd<br/>
-        change directory<br/>
-        move forwards in a directory C:/Users/username/cd TheNameofTheNextFile<br/>
-        move backwards in a directory C:/Users/username/ cd ../../.. (however many spaces you’d like to move back)</li>
+  <body>
 
-        <li>ls<br/>
-        list directory<br/>
-        prints out a list of the directory called
-        C:/Users/username/Downloads/ ls</li>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item" href="http://SandraMuller.github.io">Home</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io">Blogs</a>
+          <a class="blog-nav-item active" href="http://SandraMuller.github.io/photos.html">Photos</a>
+          <a class="blog-nav-item" href="#">References</a>
+          <a class="blog-nav-item" href="#">Contact</a>
+        </nav>
+      </div>
+    </div>
 
-        <li>rmdir<br/>
-        remove directory<br/>
-        C:/Users/username/Downloads/ rmdir text3.txt (will remove this file)<br/>
-        Rmdir can be used to delete a directory with subfolders rm removes just one file at a time</li>
-
-        <li>Pushd or popd<br/>
-        push directory or pop directory<br/>
-        C:/Users/username/ pushd folder1/folder2/folder3<br/>
-        returns:<br/>
-        C:/Users/username/folder1/folder2/folder3<br/>
-        using Popd instead of pushd after having used pushd will return:<br/>
-        C:/Users/username/</li>
-
-        <li>cp<br/>
-        copy a file or directory<br/>
-        C:/Users/username/cp text1.txt text2.txt<br/>
-        Will create a new file called text2.txt which is a copy of text1.txt</li>
-
-        <li>mv<br/>
-        move a file or directory – can be used to rename a file<br/>
-        C:/Users/username/ mv text2.txt text3.txt<br/>
-        Renames text2 file to text3</li>
-
-        <li>Also move to a different directory<br/>
-        C:/Users/username/Downloads mv text3.txt C:/Users/username/temp</li>
-
-        <li>more<br/>
-        pages through a fil<br/>
-        this will stop a lengthy print out and allow you to scroll through every page using spacebar<br/>
-        C:/Users/username/temp > more text3.txt</li>
-
-        <li>cat<br/>
-        stream a file i.e. prints the contents of a file to screen<br/>
-        C:/Users/username/temp > cat text3.txt</li>
-    </ul>
+    <div class="container">
+      <div class="blog-post">
+          </br>
+          <h2 class="blog-post-title">!Git in the Hub!</h2>
+          <h3>Intro to Git and GitHub</h3>
+          <p class="blog-post-meta">28 December, 2014 by Sandra Muller in Blog Posts</p>
+        </br>
+        <p>
+            SO a few days ago I knew nothing about Git and GitHub as well as the idea of posting soure code to the cloud! This blog post is about that. For all the aspiring developers! (*You guys rock*)
+        </p>
+        <h3>Version Control:</h3>
+        <p>
+            Git is version control. It's a command prompt app that allows you to browse repositories and files. I use Gitshell, which is Powershell with easy access to Git operations. So you can add/remove/rename files. Basically anything you can do in your desktop folder you can do on Powershell. Git or Version control keeps track of your files and remembers all of the changes you’ve made and when you make them. It allows you to roll back to an earlier version of a file via the use of commits (see commits).
+        </p>
+        <p>
+            Here is a copy of my Commands cheatsheet for Powershell(Gitshell):
+        <ul>
+            <li>pwd<br/>
+            print working directory<br/>
+            C:/Users/username/pwd</li>
+            <li> hostname <br/>
+            my computer's network name <br/>
+            C:/Users/username/hostname</li>
+            <li>mkdir<br/>
+            make directory (make file)<br/>
+            C:/Users/username/mkdir WhateverNameYouWant</li>
+            <li>cd<br/>
+            change directory<br/>
+            move forwards in a directory C:/Users/username/cd TheNameofTheNextFile<br/>
+            move backwards in a directory C:/Users/username/ cd ../../.. (however many spaces you’d like to move back)</li>
+            <li>ls<br/>
+            list directory<br/>
+            prints out a list of the directory called
+            C:/Users/username/Downloads/ ls</li>
+            <li>rmdir<br/>
+            remove directory<br/>
+            C:/Users/username/Downloads/ rmdir text3.txt (will remove this file)<br/>
+            Rmdir can be used to delete a directory with subfolders rm removes just one file at a time</li>
+            <li>Pushd or popd<br/>
+            push directory or pop directory<br/>
+            C:/Users/username/ pushd folder1/folder2/folder3<br/>
+            returns:<br/>
+            C:/Users/username/folder1/folder2/folder3<br/>
+            using Popd instead of pushd after having used pushd will return:<br/>
+            C:/Users/username/</li>
+            <li>cp<br/>
+            copy a file or directory<br/>
+            C:/Users/username/cp text1.txt text2.txt<br/>
+            Will create a new file called text2.txt which is a copy of text1.txt</li>
+            <li>mv<br/>
+            move a file or directory – can be used to rename a file<br/>
+            C:/Users/username/ mv text2.txt text3.txt<br/>
+            Renames text2 file to text3</li>
+            <li>Also move to a different directory<br/>
+            C:/Users/username/Downloads mv text3.txt C:/Users/username/temp</li>
+            <li>more<br/>
+            pages through a fil<br/>
+            this will stop a lengthy print out and allow you to scroll through every page using spacebar<br/>
+            C:/Users/username/temp > more text3.txt</li>
+            <li>cat<br/>
+            stream a file i.e. prints the contents of a file to screen<br/>
+            C:/Users/username/temp > cat text3.txt</li>
+        </ul>
     </p>
     <p>
         So the above commands will get you started in the command line.
@@ -106,17 +116,26 @@
       <ul>
         <li>git pull origin master - If I want to get changes to my remote repository from origin</li><br/>
         <li>git fetch origin master - gets the changes, but does not merge them with local branch</li><br/>
-        <li>git push origin master – will push your locally commit changes to GitHub</li><br/>
-        <li>git status – tells you if you have made any changes and if any files are untracked</li><br/>
-        <li>git add filename – this stages the file for commit (you can stage multiple files and commit once)</li><br/>
-        <li>git commit –m “commit message” – this will commit all staged files</li><br/>
-        <li>git log – shows all commits or you can > git log -5 and this will show you the last 5 commits</li><br/>
-        <li>subl filename – you have to be in the correct folder that the file is in</li><br/>
-        <li>git reset Head~number – reverses a file from the added section(staged) to bring it back to untracked</li>
+        <li>git push origin master - will push your locally commit changes to GitHub</li><br/>
+        <li>git status - tells you if you have made any changes and if any files are untracked</li><br/>
+        <li>git add filename - this stages the file for commit (you can stage multiple files and commit once)</li><br/>
+        <li>git commit -m "commit message" - will commit all staged files</li><br/>
+        <li>git log - shows all commits or you can git log -5 and this will show you the last 5 commits</li><br/>
+        <li>subl filename - you have to be in the correct folder that the file is in</li><br/>
+        <li>git reset Head~number - reverses a file from the added section(staged) to bring it back to untracked</li>
       </ul>
     </p>
     <p>
         So that was the crash course! It's all really interesting and fun to learn. It's also empowering as you get to learn how to use the command line and it gives you a greater understanding of your repository and how to navigate your PC with ease. It's great getting a glimpse of how you will work as a developer with regards to working on the same projects.
     </p>
+
+    </div>
+</div>
+
+      <footer class="blog-footer">
+        <p>You have reached the end of my page click on <em>Back to top</em> to see more pages</a>.</p>
+        <p><a href="#">Back to top</a></p>
+    </footer>
+
   </body>
 </html>
