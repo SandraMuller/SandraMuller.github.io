@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel= "stylesheet" type="text/css" href ="../bootstrap-3.3.1-dist\dist\css\bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href = "../stylesheet.css"/>
+    <title>Sandra Muller</title>
+  </head>
+<body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item" href="http://SandraMuller.github.io">Home</a>
+          <a class="blog-nav-item active" href="http://SandraMuller.github.io/blog.html">Blogs</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/photos.html">Photos</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/references.html">References</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="blog-post">
+          </br>
+          <h2 class="blog-post-title">Commandeering the Command Line</h2>
+          <h3>My basic cheatsheet for command line in Powershell(Gitshell)</h3>
+          <p class="blog-post-meta">03 January, 2015 by Sandra Muller in Blog Posts</p>
+            </br>
+            <p>
+            <ul>
+            <li>pwd<br>
+            print working directory<br>
+            C:/Users/username/pwd</li><br>
+            <li> hostname <br>
+            my computer's network name <br>
+            C:/Users/username/hostname</li><br>
+            <li>mkdir<br>
+            make directory (make file)<br>
+            C:/Users/username/mkdir WhateverNameYouWant</li><br>
+            <li>cd<br>
+            change directory<br>
+            move forwards in a directory C:/Users/username/cd TheNameofTheNextFile<br/>
+            move backwards in a directory C:/Users/username/ cd ../../.. (however many spaces you'd like to move back)</li><br>
+            <li>ls<br>
+            list directory<br>
+            prints out a list of the directory called
+            C:/Users/username/Downloads/ ls</li><br>
+            <li>rmdir<br>
+            remove directory<br>
+            C:/Users/username/Downloads/ rmdir text3.txt (will remove this file)<br>
+            Rmdir can be used to delete a directory with subfolders rm removes just one file at a time</li><br>
+            <li>Pushd or popd<br>
+            push directory or pop directory<br>
+            C:/Users/username/ pushd folder1/folder2/folder3<br><br>
+            returns:<br>
+            C:/Users/username/folder1/folder2/folder3<br>
+            using Popd instead of pushd after having used pushd will return:<br>
+            C:/Users/username/</li><br>
+            <li>cp<br>
+            copy a file or directory<br>
+            C:/Users/username/cp text1.txt text2.txt<br>
+            Will create a new file called text2.txt which is a copy of text1.txt</li><br>
+            <li>mv<br>
+            move a file or directory - can be used to rename a file<br>
+            C:/Users/username/ mv text2.txt text3.txt<br>
+            Renames text2 file to text3</li><br>
+            <li>Also move to a different directory<br>
+            C:/Users/username/Downloads mv text3.txt C:/Users/username/temp</li><br>
+            <li>more<br>
+            pages through a fil<br>
+            this will stop a lengthy print out and allow you to scroll through every page using spacebar<br>
+            C:/Users/username/temp > more text3.txt</li><br>
+            <li>cat<br>
+            stream a file i.e. prints the contents of a file to screen<br>
+            C:/Users/username/temp > cat text3.txt</li><br>
+            </ul>
+            </p>
+        </div>
+      </div>
+      <footer class="blog-footer">
+        <p>You have reached the end of my page click on <em>Back to top</em> to see more pages</a>.</p>
+        <p><a href="http://SandraMuller.github.io/blog.html">Back to top</a></p>
+    </footer>
+  </body>
+</html>
