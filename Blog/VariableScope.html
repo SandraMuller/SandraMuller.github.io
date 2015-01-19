@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel= "stylesheet" type="text/css" href ="../bootstrap-3.3.1-dist\dist\css\bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href = "../stylesheet.css"/>
+    <title>Sandra Muller</title>
+  </head>
+<body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item" href="http://SandraMuller.github.io">Home</a>
+          <a class="blog-nav-item active" href="http://SandraMuller.github.io/blog.html">Blogs</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/photos.html">Photos</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/references.html">References</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="blog-post">
+          </br>
+          <h2 class="blog-post-title">Variable Scope</h2>
+          <p class="blog-post-meta"> 16 January, 2015 by Sandra Muller in Blog Posts</p>
+            </br>
+            <div>
+              <h3>What is a Variable Scope?</h3>
+              <p>The scope of a variable determines its lifetime and controls its visibility and availability to each of the methods within a program. A variable's scope is always the full extent of the code block it is declared in.</p>
+              <p>You can create nested variables scopes, for example, a loop within a method within a class provides three levels of nested code blocks and thus equates to three levels of nested scope. if you declare a variable in one if these nested scopes, it will only be visible to the current scope and any scopes nested within it.</p>
+              <p>You can also scope variables at class-level or method-level. Class-level scope variables are available to any non-static methods within the class. Method-level scope variables are available to all parts of the method code block including nested scopes. Here is an example of a variable declared within a method and then used in an if statement, and then a variable declared within an if statement. The method-level variable is accessable outside of the if statement, whereas the if statement variable is not accessable outside of the if statement.</p>
+              <img src="../Photos/variableScope.jpg"/><br>
+
+              <br><h3>Access Modifiers</h3>
+              <p>An access modifier is used to change the scope of a variable or a method. You can set it as public, private, protected and internal.</p>
+              <p><strong>PRIVATE</strong> means that the variable or method is only accessable inside the class it is declared in.</p>
+              <p><strong>PUBLIC</strong> means that the variable or method can be accessed by code outside of the class as well.</p>
+              <p><strong>PROTECTED</strong> means that the variable or method is only accessable inside the class it is declared in and in classes derived from that class.</p>
+              <p><strong>INTERNAL</strong> means that the variable or method is only accessably in the same project its declared in.</p><br>
+              <p>So we have discussed a nested variable scope and say we have a variable declared as a public variable inside a class, it will be accessable from outside of that class. Whereas, if we had declared it as private in a class it would no longer be accessable outside of that class. Please see example below.</p>
+              <img src="../Photos/VariableClass.jpg"><br>
+            </div>
+        </div>
+      </div>
+      <footer class="blog-footer">
+        <p>You have reached the end of my page click on <em>Back to Blogs</em> to see more pages</a>.</p>
+        <p><a href="http://SandraMuller.github.io/blog.html">Back to Blogs</a></p>
+    </footer>
+  </body>
+</html>
