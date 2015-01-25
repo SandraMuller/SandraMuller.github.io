@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel= "stylesheet" type="text/css" href ="..\css\bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href = "..\css\stylesheet.css"/>
+
+    <title>Sandra Muller</title>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/bugfix.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item" href="http://SandraMuller.github.io">Home</a>
+          <a class="blog-nav-item active" href="http://SandraMuller.github.io/blog.html">Blogs</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/photos.html">Photos</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/references.html">References</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="blog-post">
+          </br>
+          <h2 class="blog-post-title">JS Objects</h2>
+          <h3>Objects, Properties, Methods and Functions</h3>
+          <p class="blog-post-meta"> 25 January, 2015 by Sandra Muller in Blog Posts</p>
+            </br>
+            <div>
+            <h3>OOP</h3>
+            <p>JavaScript is an Object Orientated Programming language. It provides 4 basic capabilities to developers:</p>
+            <ol>
+              <li><strong>Encapsulation</strong> - storing relative information together in an object.</li>
+              <li><strong>Aggregation</strong> - storing one object inside of another object.</li>
+              <li><strong>Inheritance</strong> - the capability of a class relying upon another class for some of its properties and methods.</li>
+              <li><strong>Polymorphism</strong> - being able to write one function of method that works in different ways.</li>
+            </ol>
+            <p>Objects are composed of properties. If any of these properties contains a function, it is considered to be a method of the object.</p>
+            <p>Pretty much everything in JavaScript acts like an object.</p><br>
+            <p>So here is an example of an object with properties declared using an Object Literal:</p>
+            <img src="../Photos/jsObjects1.jpg"><br><br>
+            <p>The firstName, lastName and age are properties of the object tina.</p>
+            <p>If you wanted to create an "object type" from which you could create many objects of one type, your code would look more like this using object constructor function:</p>
+            <img src="../Photos/jsObjects2.jpg"><br><br>
+            <p>The <em><strong>new</em></strong> operator is used to create an instance of the object person, which was then assigned properties.</p><br>
+            <p>If you would like to access the property of the object you can do this in one of three ways:</p>
+            <p><li><strong>objectName.property     --->  tina.firstName</strong></li></p>
+            <p><li><strong>objectName["property"]  --->  tina["firstName"]</strong></li></p>
+            <p><li><strong>objectName[expression]  --->  name = "firstName"; tina[name]</strong></li></p>
+            </ul><br>
+            <p>If you would like to add a property you can use this syntax:</p>
+            <p><li><strong>objectName.objectProperty = propertyValue ;</strong></li></p>
+            <p><li><strong>tina.songTitle = "You're simply the best!" ;</strong></li></p><br>
+            <p>If you want to delete a propery you would use this syntax:</p>
+            <p><li><strong>delete objectName.property ;</strong></li></p>
+            <p><li><strong>delete tina.age ;</strong></li></p><br>
+            <h3>Object Methods</h3>
+            <p>Methods are functions that let the object do something or let something be done to it. The method is attached to an object like the method console.log() below.</p>
+            <img src="../Photos/jsObjects3.jpg"><br><br><br>
+            <h3>Object Functions</h3>
+            <p>A function is a standalone unit of statements. Here is an example where the first and last name is sent to a function(fullName) and the function returns the full name:</p>
+            <img src="../Photos/jsObjects4.jpg"><br><br>
+            <p>call the function:</p>
+            <p><strong>fullName(michael.firstName, michael.lastName) ;</strong></p>
+            <p>This will return Michael Jackson</p>
+            <h3></h3><br><br>
+            <p>So all our little pieces of code can be put together to look like this (I've added 3 more console logs):</p>
+            <img src="../Photos/jsObjects5.jpg"><br><br>
+            <p>This is what the above code produces:</p>
+            <img src="../Photos/jsObjects6.jpg"><br><br>
+          </div>
+        </div>
+      </div>
+      <footer class="blog-footer">
+        <p>You have reached the end of my page click on <em>Back to Blogs</em> to see more pages</a>.</p>
+        <p><a href="http://SandraMuller.github.io/blog.html">Back to Blogs</a></p>
+    </footer>
+  </body>
+</html>
