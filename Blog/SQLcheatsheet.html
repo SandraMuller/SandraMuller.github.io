@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel= "stylesheet" type="text/css" href ="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href = "../css/stylesheet.css"/>
+
+    <title>Sandra Muller</title>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/bugfix.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item" href="http://SandraMuller.github.io">Home</a>
+          <a class="blog-nav-item active" href="http://SandraMuller.github.io/blog.html">Blogs</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/photos.html">Photos</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/references.html">References</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="blog-post">
+          </br>
+          <h2 class="blog-post-title">SQL COMMAND</h2>
+          <h3>My cheat sheet for SQL</h3>
+          <p class="blog-post-meta"> 27 January, 2015 by Sandra Muller in Blog Posts</p>
+            </br>
+            <div>
+            <p>I typed up this cheat sheet while working through some exercises on <a href="http://sqlzoo.net/wiki/Main_Page"><a>SQLZoo</a>, so most of the examples are specific to the tables in the exercises.</p><br>
+            <h3 style="color: #428bca">SELECT, FROM, WHERE & LIKE</h3>
+            <br><h4><strong>General SELECT Query:</strong></h4>
+            <p><strong>SELECT ... FROM ... WHERE ... = ' '</strong></p>
+            <p>e.g. SELECT population FROM world WHERE name = 'Germany'</p>
+            <p><li>population, and name are columns, Germany is the country(name) and world is the table</li></p>
+            <p><li>this returns the population of Germany</li></p><br>
+            <h4><strong>You can use operators like this:</strong></h4>
+            <p><strong>SELECT ..., .../... FROM ... WHERE ...>...</strong></p>
+            <p>e.g. SELECT name, gdp/population FROM world WHERE area > 5000000</p>
+            <p><li>operators divide and greater than have been used</li></p>
+            <p><li>this returns the countries name and result of gdp/populationy</li></p><br>
+            <h4><strong>You can use AND to ensure that two or more conditions hold true:</strong></h4>
+            <p>e.g. SELECT name, continent FROM world WHERE population < 2000000 <strong>AND</strong> gdp > 50000000000</p>
+            <p><li>this returns country names and continents that meet <em>both</em> conditions</li></p><br>
+            <h4><strong>You can use IN to check if an item is in a list:</strong></h4>
+            <p>e.g. SELECT name, population FROM world WHERE name <strong>IN</strong> ('Ireland', Iceland', 'Demark')</p>
+            <p><li>this will return the listed contries name and population</li></p><br>
+            <h4><strong>The word LIKE permits pattern matching and % is the wildcard</strong></h4>
+            <p>e.g. SELECT name FROM world WHERE name <strong>LIKE</strong> 'D<strong>%</strong>'</p>
+            <p><li>this retuns countries who's name begins with a D</li></p><br>
+            <h4><strong>The word BETWEEN allows for range checks:</strong></h4>
+            <p>e.g. SELECT name, area FROM world WHERE area BETWEEN 250000 and 300000</p>
+            <p><li>this returns countries that have an 300000 > area > 250000</li></p><br>
+            <h4><strong>ORDER BY ...</strong></h4>
+            <p>e.g. ORDER BY name</p>
+            <p><li>will return the query in order according to name</li></p><br>
+            <h4><strong>The UNDERSCORE '_' represents a single character wildcard</strong></h4>
+            <p>e.g. '_t%'</p><br>
+            <h4><strong>SELECT within SELECT:</strong></h4>
+            <p>e.g. SELECT name FROM world WHERE population > (SELECT population FROM world WHERE name = 'Russia')</p>
+            <p><li>this returns all the countries whose population is bigger than Russia's</li></p><br>
+            <h3 style="color: #428bca">AGGREGATION FUNCTIONS</h3>
+            <h4>SUM, Count, MAX, DISTINCT and GROUP BY</h4><br>
+            <h4><strong>SUM will give us the total of a given field</strong></h4>
+            <p>e.g. SELECT SUM(population) FROM world</p><br>
+            <h4><strong>the SELECT DISTINCT statement returns only distinct (different) values</strong></h4>
+            <p>e.g. SELECT DISTINCT(continent) FROM world</p><br>
+            <h4><strong>If you want to know how many of something meet your criteria you use COUNT</strong></h4>
+            <p>e.g. SELECT Count(name) FROM world WHERE area > 1000000</p><br>
+            <h4><strong>GROUP BY, HAVING is a little more tricky so here is a general plugin:</strong></h4>
+            <p><strong>SELECT</strong> column_name, aggregate_function(column_name)</p>
+            <p><strong>FROM</strong> table_name</p>
+            <p><strong>WHERE</strong> column_name operator value</p>
+            <p><strong>GROUP</strong> BY column_name</p>
+            <p><strong>HAVING</strong> aggregate_function(column_name) operator value;</p>
+            <p>e.g. SELECT continent, COUNT(name) FROM world WHERE population > 10000000 GROUP BY continent HAVING COUNT(name) > 0;</p><br>
+            <h3 style="color: #428bca">INNER JOIN</h3>
+            <h4><strong>JOIN is used to combine rows from two or more tables, based on a common field</strong></h4>
+            <p><strong>SELECT</strong> column_name</p>
+            <p><strong>FROM</strong> table_name</p>
+            <p><strong>INNER JOIN</strong> table2_name</p>
+            <p><strong>ON</strong> (id = common_id_name);</p>
+            <p>e.g. SELECT team1,team2, player FROM game INNER JOIN goal ON (id=matchid) WHERE player LIKE 'Mario%'</p><br>
+            <p>That's all for now! Looking forward to expanding on my SQL knowledge.</p>
+            </div>
+        </div>
+      </div>
+      <footer class="blog-footer">
+        <p>You have reached the end of my page click on <em>Back to Blogs</em> to see more pages</a>.</p>
+        <p><a href="http://SandraMuller.github.io/blog.html">Back to Blogs</a></p>
+    </footer>
+  </body>
+</html>
