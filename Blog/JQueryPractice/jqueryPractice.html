@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel= "stylesheet" type="text/css" href ="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href = "../../css/stylesheet.css"/>
+    
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="jqueryPracticeJS.js"></script>
+    <link rel="stylesheet" type="text/css" href="jqueryPracticeCSS.css"/>
+
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.17/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.17/themes/cupertino/jquery-ui.css"/>
+
+    <title>Sandra Muller</title>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../js/bugfix.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item" href="http://SandraMuller.github.io">Home</a>
+          <a class="blog-nav-item active" href="http://SandraMuller.github.io/blog.html">Blogs</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/photos.html">Photos</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/references.html">References</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="blog-post">
+          </br>
+          <h2 class="blog-post-title">Practicing some JQuery</h2>
+          <h3>Having some fun and learning what it's all about</h3>
+          <p class="blog-post-meta"> 04 February, 2015 by Sandra Muller in Blog Posts</p>
+          <div class = "row" style="border: 1px solid #BDEDFF">
+            <div class = "col-xs-5">
+            <br><h3>The Click-a-Sandra Game</h3>
+            <h4>A silly little game!</h4><br>
+              <div id="startover">Start over</div><br><br>
+              <p>SCORE: <span id="score">0</span></p>
+                <div id="sandrahead"></div><br><br>
+                <p id="success">You clicked-a-sandra!</p><br>
+            </div>
+          
+          <div class = "col-xs-7"><br><br>
+          <p>So basically on the left, we have a simple game where you can click away and different things happen. I use jquery to manipulate the picture, html wording and CSS. I also use a little Javascript to change things depending on how many times the image has been clicked. If you click more than 30 times my face "explodes".</p>
+          <li>.html()</li>
+          <li>.css()</li>
+          <li>.text()</li>
+          <li>.hover()</li>
+          <li>.hide() / .show()</li>
+          <li>.mousedown() / .mouseup()</li>
+          <li>.addClass() / .removeclass()</li>
+          <li>setting variables</li>
+          <li>if else statements</li>
+          </div>
+        </div><br>
+
+        <div class = "row" style="border: 1px solid #BDEDFF">
+          <br><h3 style="padding-left: 10px">Widgets</h3>
+          <div id="tabs">
+            <ul>
+              <li><a href="#tabs-1">Nunc tincidunt</a></li>
+              <li><a href="#tabs-2">Proin dolor</a></li>
+              <li><a href="#tabs-3">Aenean lacinia</a></li>
+            </ul>
+            <div id="tabs-1">
+            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+            </div>
+            <div id="tabs-2">
+            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+            </div>
+            <div id="tabs-3">
+            <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+            <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+            </div>
+          </div>
+          <br><p>Above I added a tabs widget. Jquery UI gives you access to copy source code to help with plugins. There are many. You can build your own theme as well, but I got my theme from ASP .NET please follow links below. It's great to explore these sites and see what is possible.</p><br>
+          <li><a target="_blank" href="http://jqueryui.com/tabs/">JQuery UI - The Tabs Source Code</a></li>
+          <li><a target="_blank" href="http://www.asp.net/ajax/cdn/jquery-ui/cdnjqueryui1817">ASP .NET - Different Themes</a></li>
+          <li><a target="_blank" href="http://channel9.msdn.com/Series/Javascript-Fundamentals-Development-for-Absolute-Beginners/Installing-and-Utilizing-jQuery-Plugins-17">Channel 9 - Plugin Tutorial</a></li><br>
+      </div><br>
+
+      <div class = "row" style="border: 1px solid #BDEDFF">
+        <br><h3 style="padding-left:10px">The Drag and Drop puzzle</h3>
+        <p>This game makes use of the draggable() method. You basically drag the images from the right on to the picture on the left. Match up the images like a puzzle!</p>
+        <p>You can also set a snap and a snapMode for draggable(), but I can't do that with my current layout. You can follow this link to see a <a target="_blank" href="http://www.pureexample.com/jquery-ui/draggable-snap-to.html">draggable snap grid</a></p><br><br>
+        <div class = "col-xs-6">
+          <div class="droppable"></div>
+        </div>
+        <div class = "col-xs-2">
+          <div class="draggable" class="ui-widget-content"><img src="cat-0-1.jpeg"></div>
+          <div class="draggable" class="ui-widget-content"><img src="cat-1-2.jpeg"></div>
+          <div class="draggable" class="ui-widget-content"><img src="cat-2-1.jpeg"></div>
+        </div>
+        <div class = "col-xs-2">
+          <div class="draggable" class="ui-widget-content"><img src="cat-0-0.jpeg"></div>
+          <div class="draggable" class="ui-widget-content"><img src="cat-0-2.jpeg"></div>
+          <div class="draggable" class="ui-widget-content"><img src="cat-2-0.jpeg"></div>
+        </div>
+        <div class = "col-xs-2" style="padding-bottom:20px">
+          <div class="draggable" class="ui-widget-content"><img src="cat-2-2.jpeg"></div>
+          <div class="draggable" class="ui-widget-content"><img src="cat-1-1.jpeg"></div>
+          <div class="draggable" class="ui-widget-content"><img src="cat-1-0.jpeg"></div>
+        </div>
+      </div>
+  </div>
+</div>
+
+      <footer class="blog-footer">
+        <p>You have reached the end of my page click on <em>Back to Blogs</em> to see more pages</a>.</p>
+        <p><a href="http://SandraMuller.github.io/blog.html">Back to Blogs</a></p>
+    </footer>
+
+  </body>
+</html>

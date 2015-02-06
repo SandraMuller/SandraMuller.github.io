@@ -1,4 +1,4 @@
- NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
+/* NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
  IT'S JUST JUNK FOR OUR DOCS!
  ++++++++++++++++++++++++++++++++++++++++++
 !
@@ -8,6 +8,7 @@
   details, see httpcreativecommons.orglicensesby3.0.
  
  Intended to prevent false-positive bug reports about Bootstrap not working properly in old versions of IE due to folks testing using IE's unreliable emulation modes.
+
 (function () {
   'use strict';
 
@@ -49,3 +50,5 @@
     window.alert('WARNING You appear to be using IE' + nonEmulated + ' in IE' + emulated + ' emulation mode.nIE emulation modes can behave significantly differently from ACTUAL older versions of IE.nPLEASE DON'T FILE BOOTSTRAP BUGS based on testing in IE emulation modes!')
   }
 })();
+
+*/
