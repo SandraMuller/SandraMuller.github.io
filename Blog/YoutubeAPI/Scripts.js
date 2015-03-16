@@ -29,22 +29,11 @@ var n = 0;
         $('.VideoId').children().remove();
           for(var i in response.items) {
             var item = response.items[i];
-            console.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
             playlist[i] = item.id.videoId;
-            $('.VideoId').append('<p>'+playlist[i]+'</p>');
+            $('.VideoId').append('<pre>'+playlist[i]+'</pre>');
           }
 
             LoadPlayer();
 
         });
   }
-
-//   function PlayList(jsonString) {
-//       var playlist = [];
-//       var i = 0;
-// for (var item in PlayList) {
-//       playlist[i] = item.id.videoId;
-//       console.log(playlist[i]);
-//       i++;
-//     }
-//   }
