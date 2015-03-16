@@ -25,7 +25,7 @@ $(document).ready(function(){
         $('#search-container').html('<pre>' + data + '</pre>');
           var playlist = [];
           var i = 0;
-        for (var item in PlayList) {
+        for (var item in data) {
           playlist[i] = item.id.videoId;
           $('.VideoId').append('<p>'+playlist[i]+'</p>');
           i++;
