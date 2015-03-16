@@ -1,12 +1,12 @@
 
 $(document).ready(function(){
 
-  LoadPlayer();
+  //LoadPlayer();
 
 });
 
     function LoadPlayer() {
-      //$('.player').children().remove();
+      $('.player').children().remove();
       $('.player').append('<p><iframe id="ytplayer" type="text/html" width="640" height="390" ' +
       ' src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com" frameborder="0"/></p>');
     }; 
@@ -20,7 +20,7 @@ $(document).ready(function(){
         });
       request.execute(function(response) {
         var results = JSON.stringify(response.result);
-        $('#search-container').html('<pre>' + data + '</pre>');
+        $('#search-container').html('<pre>' + results + '</pre>');
           var playlist = [];
           var i = 0;
           for(var i in results.items) {
