@@ -19,19 +19,26 @@ $(document).ready(function(){
           maxResults: 10
         });
 
+
       request.execute(function(response) {
-        var str = JSON.stringify(response.result);
-        $('#search-container').html('<pre>' + str + '</pre>');
-        PlayList(str);
-      });
+        var data = JSON.stringify(response.result);
+        $('#search-container').html('<pre>' + data + '</pre>');
+          var playlist = [];
+          var i = 0;
+        for (var item in PlayList) {
+          playlist[i] = item.id.videoId;
+          $('.VideoId').append('<p>'+playlist[i]+'</p>');
+          i++;
+        }
+        });
   }
 
-  function PlayList(jsonString) {
-      var playlist = [];
-      var i = 0;
-for (var item in PlayList) {
-      playlist[i] = item.id.videoId;
-      console.log(playlist[i]);
-      i++;
-    }
-  }
+//   function PlayList(jsonString) {
+//       var playlist = [];
+//       var i = 0;
+// for (var item in PlayList) {
+//       playlist[i] = item.id.videoId;
+//       console.log(playlist[i]);
+//       i++;
+//     }
+//   }
