@@ -1,9 +1,7 @@
 
 $(document).ready(function(){
 
-  LoadPlayer();
   var playlist = [];
-
 });
 
     function LoadPlayer() {
@@ -31,6 +29,9 @@ $(document).ready(function(){
             playlist[i] = item.id.videoId;
             $('.VideoId').append('<p>'+playlist[i]+'</p>');
           }
+
+            LoadPlayer();
+            
         });
   }
 
