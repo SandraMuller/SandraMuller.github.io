@@ -14,8 +14,8 @@
     <link rel="stylesheet" type="text/css" href="YouTubeCSS.css"/>
 
 
-    <script type="text/javascript" src="getYouTube.js"></script>
-    <script type="text/javascript" src="jsBackEnd.js"></script>
+    // <script type="text/javascript" src="getYouTube.js"></script>
+    <script type="text/javascript" src="Scripts.js"></script>
 
 
     <title>Sandra Muller</title>
@@ -48,39 +48,18 @@
       <div class="blog-post">
           </br>
           <h2 class="blog-post-title">YouTube Video Search</h2>
-          <h3>Top 25 results</h3>
+          <h3>Top 10 results</h3>
           <p class="blog-post-meta"> 16 March, 2015 by Sandra Muller in Blog Posts</p>
             </br>
             <div>
             <h3 class="player">YouTube</h3>
 
+
             <input type="text" id="query" size="10" />
             <input type="button" value="Search" onclick="search();" /><br>
+            <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+            <div id="search-container"></div>
 
-<script>
-        function googleApiClientReady(){
-                gapi.client.setApiKey('AIzaSyBuvL_ewyuhL0t4WThs1tts9iKUlD119iE');
-                gapi.client.load('youtube', 'v3', function() {
-                });
-        }
-  function search() {
-         var q = $('#query').val();
-        var request = gapi.client.youtube.search.list({
-          q: q,
-          part: 'snippet',
-          maxResults: 10
-        });
-
-  request.execute(function(response) {
-    var str = JSON.stringify(response.result);
-    $('#search-container').html('<pre>' + str + '</pre>');
-  });
-}
-
- </script>
-<script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
-
-          <div id="search-container"></div>
 
             </div>
         </div>
