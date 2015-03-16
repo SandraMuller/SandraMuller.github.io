@@ -57,6 +57,13 @@
 
             <input type="text" id="query" size="10" />
             <input type="button" value="Search" onclick="search();" /><br>
+            <script>    
+                function googleApiClientReady(){
+                    gapi.client.setApiKey('AIzaSyBuvL_ewyuhL0t4WThs1tts9iKUlD119iE');
+                    gapi.client.load('youtube', 'v3', function() {
+                    });
+                }
+                </script>
             <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
             <div id="search-container"></div>
 
