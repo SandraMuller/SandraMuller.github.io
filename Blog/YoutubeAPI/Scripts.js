@@ -18,8 +18,6 @@ $(document).ready(function(){
           part: 'snippet',
           maxResults: 10
         });
-
-
       request.execute(function(response) {
         var data = JSON.stringify(response.result);
         $('#search-container').html('<pre>' + data + '</pre>');
@@ -31,7 +29,6 @@ $(document).ready(function(){
             playlist[i] = item.id.videoId;
             $('.VideoId').append('<p>'+playlist[i]+'</p>');
           }
-        }
         });
   }
 
