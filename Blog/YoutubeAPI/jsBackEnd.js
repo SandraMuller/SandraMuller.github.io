@@ -1,8 +1,7 @@
 
 $(document).ready(function(){
 
-  //LoadPlayer();
-  onYouTubeApiLoad();
+  LoadPlayer();
 
   function LoadPlayer(){
     //$('.player').children().remove();

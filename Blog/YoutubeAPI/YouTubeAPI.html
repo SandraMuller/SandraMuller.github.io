@@ -58,7 +58,7 @@
         function googleApiClientReady(){
                 gapi.client.setApiKey('AIzaSyBuvL_ewyuhL0t4WThs1tts9iKUlD119iE');
                 gapi.client.load('youtube', 'v3', function() {
-                        searchByKeyword();
+                  searchByKeyword();
                 });
         }
         function searchByKeyword() {
@@ -72,7 +72,6 @@
                         var str = JSON.stringify(response.result);
                         alert(str);
                 });
-        }
  </script>
 <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
 
