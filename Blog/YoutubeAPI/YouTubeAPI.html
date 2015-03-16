@@ -54,36 +54,28 @@
             <div>
             <h3 class="player">YouTube</h3>
 
+            <input type="text" id="query" size="10" />
+            <input type="button" value="Search" onclick="search();" /><br>
+
 <script>
         function googleApiClientReady(){
                 gapi.client.setApiKey('AIzaSyBuvL_ewyuhL0t4WThs1tts9iKUlD119iE');
                 gapi.client.load('youtube', 'v3', function() {
-                        search();
                 });
         }
-        function search() {
-  //var q = $('#query').val();
-  var request = gapi.client.youtube.search.list({
-    q: 'dogs',
-    part: 'snippet'
-  });
+  function search() {
+         var q = $('#query').val();
+        var request = gapi.client.youtube.search.list({
+          q: q,
+          part: 'snippet',
+          maxResults: 10
+        });
 
   request.execute(function(response) {
     var str = JSON.stringify(response.result);
     $('#search-container').html('<pre>' + str + '</pre>');
   });
 }
-        // function searchByKeyword() {
-        //     var results = gapi.client.youtube.search.list('id,snippet', {q: 'dogs', maxResults: 25});
-        //     for(var i in results.items) {
-        //       var item = results.items[i];
-        //       Console.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
-        //     }
-        //         request.execute(function(response) {
-        //                 var str = JSON.stringify(response.result);
-        //                 alert(str);
-        //         });
-        // }
 
  </script>
 <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
