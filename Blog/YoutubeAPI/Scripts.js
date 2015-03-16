@@ -23,8 +23,8 @@ $(document).ready(function(){
         $('#search-container').html('<pre>' + results + '</pre>');
           var playlist = [];
           var i = 0;
-          for(var i in results.items) {
-            var item = results.items[i];
+          for(var i in response.items) {
+            var item = response.items[i];
             console.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
             playlist[i] = item.id.videoId;
             $('.VideoId').append('<p>'+playlist[i]+'</p>');
