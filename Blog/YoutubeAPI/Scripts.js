@@ -1,8 +1,10 @@
 
 $(document).ready(function(){
 
-  var playlist = [];
+  
 });
+
+var playlist = [];
 
     function LoadPlayer() {
       $('.player').children().remove();
@@ -31,7 +33,7 @@ $(document).ready(function(){
           }
 
             LoadPlayer();
-            
+
         });
   }
 
