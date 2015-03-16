@@ -8,6 +8,7 @@ var playlist = [];
 var n = 0;
 
     function LoadPlayer() {
+      if (n === 10){ n = 0;}
       $('.player').children().remove();
       $('.player').append(' <p><iframe id="ytplayer" type="text/html" width="640" height="390" ' +
         ' src="http://www.youtube.com/embed/'+playlist[n]+'" frameborder="0"/></p> ' +
