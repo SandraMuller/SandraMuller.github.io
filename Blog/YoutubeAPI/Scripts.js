@@ -19,7 +19,7 @@ $(document).ready(function(){
           maxResults: 10
         });
       request.execute(function(response) {
-        var data = JSON.stringify(response.result);
+        var results = JSON.stringify(response.result);
         $('#search-container').html('<pre>' + data + '</pre>');
           var playlist = [];
           var i = 0;
