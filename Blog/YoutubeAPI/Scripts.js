@@ -2,14 +2,15 @@
 $(document).ready(function(){
 
   LoadPlayer();
+  var playlist = [];
 
 });
 
     function LoadPlayer() {
       $('.player').children().remove();
       $('.player').append('<p><iframe id="ytplayer" type="text/html" width="640" height="390" ' +
-      ' src="http://www.youtube.com/embed/0pajUiPYjrI" frameborder="0"/></p>');
-      //http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com
+      ' src="http://www.youtube.com/embed/'+playlist[0]+'" frameborder="0"/></p>');
+      //http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com 0pajUiPYjrI
     }; 
 
     function search() {
@@ -22,7 +23,7 @@ $(document).ready(function(){
       request.execute(function(response) {
         var results = JSON.stringify(response.result);
         $('#search-container').html('<pre>' + results + '</pre>');
-          var playlist = [];
+
         $('.VideoId').children().remove();
           for(var i in response.items) {
             var item = response.items[i];
