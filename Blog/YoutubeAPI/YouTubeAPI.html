@@ -53,25 +53,34 @@
             </br>
             <div>
             <h3 class="player">YouTube</h3>
+            <input type="text" id="search-button" size="10" />
+            <input type="button" value="#query" onclick="search();" />
 
 <script>
         function googleApiClientReady(){
                 gapi.client.setApiKey('AIzaSyBuvL_ewyuhL0t4WThs1tts9iKUlD119iE');
                 gapi.client.load('youtube', 'v3', function() {
-                  searchByKeyword();
+
                 });
         }
-        function searchByKeyword() {
-            var results = YouTube.Search.list('id,snippet', {q: 'dogs', maxResults: 25});
-            for(var i in results.items) {
-                var item = results.items[i];
-                Console.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
-            }
-        }
-                request.execute(function(response) {
-                        var str = JSON.stringify(response.result);
-                        alert(str);
-                });
+// After the API loads, call a function to enable the search box.
+function handleAPILoaded() {
+  $('#search-button').attr('disabled', false);
+}
+
+// Search for a specified string.
+function search() {
+  var q = $('#query').val();
+  var request = gapi.client.youtube.search.list({
+    q: q,
+    part: 'snippet'
+  });
+
+  request.execute(function(response) {
+    var str = JSON.stringify(response.result);
+    $('#search-container').html('<pre>' + str + '</pre>');
+  });
+}
  </script>
 <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
 
