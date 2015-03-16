@@ -5,12 +5,14 @@ $(document).ready(function(){
 });
 
 var playlist = [];
+var n = 0;
 
     function LoadPlayer() {
       $('.player').children().remove();
-      $('.player').append('<p><iframe id="ytplayer" type="text/html" width="640" height="390" ' +
-      ' src="http://www.youtube.com/embed/'+playlist[0]+'" frameborder="0"/></p>');
-      //http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com 0pajUiPYjrI
+      $('.player').append(' <p><iframe id="ytplayer" type="text/html" width="640" height="390" ' +
+        ' src="http://www.youtube.com/embed/'+playlist[n]+'" frameborder="0"/></p> ' +
+        ' <input type="button" value="Next Video" onclick="LoadPlayer()" /><br> ');
+      n++;
     }; 
 
     function search() {
