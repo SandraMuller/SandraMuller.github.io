@@ -67,11 +67,12 @@
               var item = results.items[i];
               Console.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
             }
-        }
                 request.execute(function(response) {
                         var str = JSON.stringify(response.result);
                         alert(str);
                 });
+        }
+        
  </script>
 <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
 
