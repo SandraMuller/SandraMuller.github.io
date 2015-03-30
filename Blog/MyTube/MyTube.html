@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel= "stylesheet" type="text/css" href ="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href = "../../css/stylesheet.css"/>
+
+    <title>Sandra Muller</title>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../js/bugfix.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item" href="http://SandraMuller.github.io">Home</a>
+          <a class="blog-nav-item active" href="http://SandraMuller.github.io/blog.html">Blogs</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/photos.html">Photos</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/references.html">References</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="blog-post">
+          </br>
+          <h2 class="blog-post-title">ASP.Net WebAPI - MyTube</h2>
+          <h3>Using youTubes API to allow a user to search for videos</h3>
+          <p class="blog-post-meta"> 30 March, 2015 by Sandra Muller in Blog Posts</p>
+            </br>
+            <div>
+            <h4><a target="_blank" href="http://mytube.azurewebsites.net/"><strong>visit - http://mytube.azurewebsites.net</strong></a></h4>
+            <br>
+            <h4>Application Programming Interface – API</h4>
+            <p>So I was recently introduced to the world of API’s and it’s amazing how much information has been made available to developers. It has been fun and I’m excited for some of the projects I have planned.</p>
+            <p>MyTube is the first of those projects. I had originally done this project only in html and javascript with no back end. You can find that version under my javascript blogs. MyTube allows you to search YouTube from my webpage. You enter a search item and 20 videos are sent back meeting your search parameters.  YouTube have many API’s and ways of interacting with their data, but I decided to use their general search API.</p>
+            <p>Below is a diagram of MyTube’s data flow:</p>
+            <img src="MyTubeFlow.png"><br>
+            <br><p>A POST request is sent in Ajax to my ASP.Net web API. ASP.Net is responsible for forming a query and sending that query to YouTube via Google and YouTube API services. The first 20 videos meeting the criteria are sent back from YouTube. There is a fair amount of data attached to one video, but I only save the title and video id to a session list. The backend is all done using C#. Upon the POST request being successful a GET function is run, which hits the GET API on my ASP.Net web API. This goes and fetches the data from the session list and saves it into a javascript array. Javascript is responsible for storing that data and loading the player accordingly. This whole cycle is triggered when a user submits a search item.</p>
+            <p>The player and elements required for it are added and removed using javascript. The html only holds the class name “player” in a div that everything gets attached to.</p>
+            <p>Authentication can be key for accessing data from API’s. There are 2 ways of authenticating yourself to a web API. One is using a Key generated specifically for you or OAuth2 authentication. So I have a key for my YouTube search that I was given when I registered the application on my google developers console. I also have OAuth2 credentials as I learnt how to set up google OAuth2 on ASP.Net. I’m not using it for this version of MyTube though.</p>
+            <p>I also learnt a bit about ASP.Net Web API help pages. I manage to edit some of it, but there is more I’d like to still do.</p>
+            <p>I would say those are the main components to this Web API. I enjoyed playing around with the CSS and getting some style going.</p>
+            </div>
+        </div>
+      </div>
+      <footer class="blog-footer">
+        <p>You have reached the end of my page click on <em>Back to Blogs</em> to see more pages</a>.</p>
+        <p><a href="http://SandraMuller.github.io/blog.html">Back to Blogs</a></p>
+    </footer>
+  </body>
+</html>
