@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../favicon.ico">
+    <link rel= "stylesheet" type="text/css" href ="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href = "../../css/stylesheet.css"/>
+
+    <title>Sandra Muller</title>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../js/bugfix.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item" href="http://SandraMuller.github.io">Home</a>
+          <a class="blog-nav-item active" href="http://SandraMuller.github.io/blog.html">Blogs</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/photos.html">Photos</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/references.html">References</a>
+          <a class="blog-nav-item" href="http://SandraMuller.github.io/contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="blog-post">
+          </br>
+          <h2 class="blog-post-title">My Movie Library</h2>
+          <h3>Technical Assessment</h3>
+          <p class="blog-post-meta"> 03 May, 2015 by Sandra Muller in Blog Posts</p>
+            </br>
+             <div>
+            <h4><a target="_blank" href="http://mymovielist.apphb.com/"><strong>visit My Movie Library</strong></a></h4>
+            <p>source code - <a target="_blank" href="https://github.com/SandraMuller/MyMovieList"><strong>GitHub</strong></a> </p>
+            <br>
+            <h3>The Assignment</h3>
+            <p>An ASP.NET MVC app with Entity Framework, using GitHub to store the source code and deployed to Appharbor with SQL Server. </p>
+            <p>The app is to:
+ 				<li>allow people to register new accounts</li>
+				<li>allow people to sign in and sign out of existing accounts</li>
+				<li>create and delete movies</li>
+				<li>bring back some movie details from http://www.omdbapi.com/, if you type in the exact title and year</li>
+			</p>
+
+            <br><h3>The Application</h3>
+            <p>The specs were met and it was nice getting to use appharbor as I have never used this service before. Installing and setting up SQL server was about the most tricky part. I had to setup an alias connection name so that the connection string would be linked correctly and allow me to run a database remotely and locally. It was also moderately challenging when I added columns to my database with Entity Framework as it wasn't carried over to Appharbor and the only way I could find to fix it was to uninstall SQL Server and re-install. This dropped the database and re-created the tables with the correct columns. Git was used for source control across GitHub and Appharbor.</p><br>
+            <p><img src="appharbor.png"></p>
+            <br><br><h3><strong>Some Features & Highlights</strong></h3><br>
+            <div style="border: 1px solid grey; padding:10px">
+            <p><img style="border: 1px solid grey" src="accordion.png"></p>
+            <p style="font-size:13px "> - Image of the accordion</p><br>
+            <p>From a responsive web design point of view I decided to use an accordion on the home page to minimize the amount of data being displayed at once and the length of the page. I also chose the accordion because it is a jquery ui and I had never used jquery ui's in my ASP.NET app's before. This was an interesting exercise as I had to install the jquery ui library nuget package and then bundle/render all the relevant files. The accordion didn't resize well when data was added dynamically so I decided to set the accordion div height instead and that did the trick.</p>
+            <p>I also found glyphycons for bootstrap and that's the little down arrows on the headers for the accordion.</p>
+            </div><br>
+            <div style="border: 1px solid grey; padding:10px">
+ 			<p><img style="border: 1px solid grey" src="getlibrary.png"></p><br>
+            <p>I enjoy using LINQ and lambda expressions. This one is interesting because it actually groups everything by title as one or more users may have the same movie in their list. By grouping it we are able to take just one title from that group and make sure there are no duplicate titles in the movie library being displayed on the home page. It also orders the titles alphabetically.</p><br>
+            </div><br>
+            <div style="border: 1px solid grey; padding:10px">
+ 			<p><img style="border: 1px solid grey" src="checkyear.png"></p><br>
+            <p>Part of developing a site is to validate the data. In the javascript code above, I check that the year being entered is actually 4 digits long and that it is infact a number. I specifically need the data like this as the API I use it for requires this information for the search it performs on it's database.</p>
+            </div><br><br>
+            <p>There are many more features that could be added, but I feel that I have developed all the skills I can at this point in time on this project. I am ready to move onto the next challenge, learn even more and develop my skills further. </p>
+            </div>
+        </div>
+      </div>
+      <footer class="blog-footer">
+        <p>You have reached the end of my page click on <em>Back to Blogs</em> to see more pages</a>.</p>
+        <p><a href="http://SandraMuller.github.io/blog.html">Back to Blogs</a></p>
+    </footer>
+  </body>
+</html>
